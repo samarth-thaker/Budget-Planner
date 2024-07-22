@@ -1,76 +1,30 @@
 import 'package:flutter/material.dart';
 
-class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
-
-  void home(BuildContext context) {
+class Statistics extends StatelessWidget {
+  const Statistics({super.key});
+void home(BuildContext context) {
     Navigator.pushNamed(context, '/dashboard');
   }
-
   void plan(BuildContext context) {
     Navigator.pushNamed(context, '/plan');
   }
-
   void add(BuildContext context) {
     Navigator.pushNamed(context, '/add');
   }
-
   void stats(BuildContext context) {
     Navigator.pushNamed(context, '/stats');
   }
-
   void more(BuildContext context) {
     Navigator.pushNamed(context, '/more');
   }
-
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double containerWidth = screenWidth * 0.4;
-    //double containerWidth_2 = screenWidth * 0.2;
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text(
-          "Hi!",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
-        ),
-        
-      ),
-      body: Center(
-        heightFactor: 1.5,
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const SizedBox(
-            width: 20,
-          ),
-          Container(
-            padding: const EdgeInsets.all(8), 
-            width: containerWidth,
-            height: 150,
-            color: const Color.fromARGB(249, 128, 128, 128),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            width: containerWidth,
-            height: 150,
-            color: const Color.fromARGB(249, 128, 128, 128),
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-        ],
-      )),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon((Icons.home_rounded)),
+            icon: Icon(Icons.home_rounded),
             label: 'Home',
           ),
           BottomNavigationBarItem(

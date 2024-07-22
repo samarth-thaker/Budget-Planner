@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
     double buttonWidth = screenWidth * 0.8;
     return Scaffold(
       appBar: AppBar(
-        
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: const Text('Login', style: TextStyle(
           color: Color.fromARGB(249, 0, 0, 0),
@@ -93,10 +93,10 @@ class LoginScreen extends StatelessWidget {
                Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Already have an account?"),
+                  const Text("Don't have an account?"),
                   TextButton(
-                      onPressed: () => login(context),
-                      child: const Text('Login'))
+                      onPressed: () => signup(context),
+                      child: const Text('Signup'))
                 ],
               )
             ],
