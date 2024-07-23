@@ -43,7 +43,9 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = screenWidth * 0.8;
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,

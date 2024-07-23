@@ -19,6 +19,7 @@ void home(BuildContext context) {
   }
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

@@ -55,6 +55,7 @@ class SignupScreen extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double buttonWidth = screenWidth * 0.8;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(

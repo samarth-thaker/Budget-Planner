@@ -50,7 +50,11 @@ class Dashboard extends StatelessWidget {
             padding: const EdgeInsets.all(8), 
             width: containerWidth,
             height: 150,
-            color: const Color.fromARGB(249, 128, 128, 128),
+            //color: const Color.fromARGB(249, 128, 128, 128),
+             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: const Color.fromARGB(249, 128, 128, 128),
+            ),
           ),
           const SizedBox(
             width: 20,
@@ -59,7 +63,11 @@ class Dashboard extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             width: containerWidth,
             height: 150,
-            color: const Color.fromARGB(249, 128, 128, 128),
+            
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: const Color.fromARGB(249, 128, 128, 128),
+            ),
           ),
           const SizedBox(
             width: 20,
