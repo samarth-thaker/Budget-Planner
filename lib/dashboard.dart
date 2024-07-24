@@ -37,41 +37,66 @@ class Dashboard extends StatelessWidget {
               fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
         ),
       ),
-      body: Center(
-          heightFactor: 1.5,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
             children: [
-              const SizedBox(
-                width: 20,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: containerWidth, // Adjust width as needed
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: const Color.fromARGB(249, 128, 128, 128),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: containerWidth, // Adjust width as needed
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: const Color.fromARGB(249, 128, 128, 128),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                ],
               ),
+              const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.all(8),
-                width: containerWidth,
-                height: 150,
-                //color: const Color.fromARGB(249, 128, 128, 128),
+                width: 2*containerWidth + 20,
+                height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
                   color: const Color.fromARGB(249, 128, 128, 128),
                 ),
               ),
-              const SizedBox(
-                width: 20,
-              ),
+              const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.all(8),
-                width: containerWidth,
-                height: 150,
+                width: 2*containerWidth + 20,
+                height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
                   color: const Color.fromARGB(249, 128, 128, 128),
                 ),
-              ),
-              const SizedBox(
-                width: 20,
               ),
             ],
-          )),
+          ),
+        ),
+          
       bottomNavigationBar: ValueListenableBuilder<int>(
           valueListenable: _selectedIndex,
           builder: (context, selectedIndex, child) {
