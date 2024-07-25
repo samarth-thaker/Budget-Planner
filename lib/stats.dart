@@ -59,7 +59,9 @@ class Statistics extends StatelessWidget {
           style: TextStyle(
               fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),
         ),
+        
       ),
+      
       body: ListView(
         children:  [
           const SizedBox(height: 0),
