@@ -4,20 +4,8 @@ class AddExpense extends StatelessWidget {
   const AddExpense({super.key});
     static final ValueNotifier<int> _selectedIndex = ValueNotifier<int>(0);
 
-void home(BuildContext context) {
-    Navigator.pushNamed(context, '/dashboard');
-  }
-  void plan(BuildContext context) {
-    Navigator.pushNamed(context, '/plan');
-  }
-  void add(BuildContext context) {
-    Navigator.pushNamed(context, '/add');
-  }
-  void stats(BuildContext context) {
-    Navigator.pushNamed(context, '/stats');
-  }
-  void more(BuildContext context) {
-    Navigator.pushNamed(context, '/more');
+void _navigateTo(BuildContext context, String route) {
+    Navigator.pushNamed(context, route);
   }
   @override
   Widget build(BuildContext context) {
@@ -53,26 +41,10 @@ void home(BuildContext context) {
                 ),
               ],
               onTap: (index) {
-                _selectedIndex.value = index;
-                switch (index) {
-                  case 0:
-                    home(context);
-
-                    break;
-                  case 1:
-                    plan(context);
-                    break;
-                  case 2:
-                    add(context);
-                    break;
-                  case 3:
-                    stats(context);
-                    break;
-                  case 4:
-                    more(context);
-                    break;
-                }
-              },
+              _selectedIndex.value = index;
+              _navigateTo(
+                  context, ['/', '/plan', '/add', '/stats', '/more'][index]);
+                          },
             );
           }),
     );
