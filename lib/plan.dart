@@ -90,8 +90,8 @@ class Planning extends StatelessWidget {
                   label: 'Stats',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.more_vert_sharp),
-                  label: 'More',
+                  icon: Icon(Icons.settings),
+                  label: 'Settings',
                 ),
               ],
               onTap: (index) {
